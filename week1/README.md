@@ -15,11 +15,15 @@ LLMs have improved this flaw by broadening the training data and introducing fin
 
 A practical example of this problem recently occurred while doing a simple task at work: a cron job that fetches entities and batch updates them needed to start paginating the requests to handle more items (it was getting behind because the response was consistently maxing its limit). I asked Copilot to write unit tests while I added the pagination. It did impressive work and must have used an automata to determine what it would do because for one line of code, it wrote four tests to cover each branch.
 
+```Python
 if not cursor or len(item) < limit:
     has_more = False
+```
 
 It wrote test cases for when both statements of the disjoint are true, both are false, and when either one is true. It was impressive. However, the code coverage showed that these lines were only partially covered. Why? I have no idea. The logic from the LLM was sound. And no matter how I asked it to rewrite the tests, the code coverage failed. I ended up spending more time with the LLM than if I had not used it to begin with. In the end, only after giving up with the LLM did I realize I didn't need to branch the logic at all.
 
+```Python
 has_more = bool(cursor) and len(item) == limit
+```
 
 It is those types of things that LLMs just do not get yet. 
