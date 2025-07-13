@@ -1,9 +1,10 @@
 # MSSE640-2025summer
 
 ## Assignments
-### [Assignment #1](./week1/README.md)
+### [Assignment #1](./week2/README.md)
 
 ## Projects
+### [Project #1](./week2/main.py)
 
 ### Getting Started
 
