@@ -15,6 +15,16 @@ def test_triangle_scalene():
     t = Triangle([3, 4, 5])
     assert t.determineType() == TriangleType.SCALENE
 
+def test_triangle_zero_side():
+    with pytest.raises(ValueError) as exc:
+        Triangle([0, 1, 1])
+    assert "A Triangle side cannot be zero" in str(exc.value)
+
+def test_triangle_negative_side():
+    with pytest.raises(ValueError) as exc:
+        Triangle([-1, 1, 1])
+    assert "Side lengths cannot be negative" in str(exc.value)
+
 
 # Tests for App in CLI mode
 def test_parse_cli_valid_args(monkeypatch):

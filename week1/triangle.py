@@ -12,6 +12,12 @@ class Triangle:
 
 
 	def __init__(self, sides: list[int]) -> None:
+		for side in sides:
+			if not side:
+				raise ValueError("A Triangle side cannot be zero")
+			if side < 0:
+				raise ValueError("Side lengths cannot be negative")
+	
 		self.sides = sides
 
 
