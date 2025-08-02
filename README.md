@@ -4,6 +4,7 @@
 ### [Assignment #1](./week2/README.md)
 ### [Assignment #2](./week3/README.md)
 ### [Assignment #3](./week4/README.md)
+### [Assignment #4](./week5/README.md)
 
 ## Projects
 ### [Project #1](./week2/main.py)
