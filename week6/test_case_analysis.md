@@ -10,9 +10,10 @@ In the following example, we've made a React design system component that can ha
 - default
 - hovered
 - clicked
+
 The default behavior that is only the info icon will show. While the user hovers the info icon or if the user clicks the icon, it will show the content (passed as `children`) until the user stops hovering it or clicks on a different element. The `InfoPopover` also accepts a prop for its location relative to the info icon: `above`, `right`, `below`, or `left`. 
 
-**InfoPopover.tsx**
+*InfoPopover.tsx*
 ```TypeScript
 import React, { useRef, useState } from 'react';
 
@@ -87,7 +88,7 @@ const InfoPopover: React.FC<InfoPopoverProps> = ({ children, location = 'above' 
 
 We would write state transition tests like this:
 
-**InfoPopover.spec.tsx**
+*InfoPopover.spec.tsx*
 ```TypeScript
 import { render, screen, fireEvent } from '@testing-library/react';
 import InfoPopover from './InfoPopover';
