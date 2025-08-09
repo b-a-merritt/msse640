@@ -5,9 +5,12 @@
 ### [Assignment #2](./week3/README.md)
 ### [Assignment #3](./week4/README.md)
 ### [Assignment #4](./week5/README.md)
+### [Assignment #5](./week6/README.md)
 
 ## Projects
 ### [Project #1](./week2/main.py)
+### [Project #2](./week4/postman_project.md)
+### [Project #3](./week6/project3/README.md)
 
 ### Getting Started
 

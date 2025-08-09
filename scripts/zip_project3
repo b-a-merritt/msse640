@@ -1,0 +1,12 @@
+#bin/bash
+
+mkdir project3
+
+cp ./week6/project3/server.py ./project3/application.py
+cp ./requirements.txt ./project3/requirements.txt
+
+cd project3
+zip -r ../project3.zip ./*
+
+cd ..
+rm -rf project3

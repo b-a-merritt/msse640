@@ -160,6 +160,6 @@ If a feature can be represented by a state diagram or state table, and especiall
 
 One limitation of state transition testing is that it only applies when the system’s behavior can be modeled with a finite set of states and transitions. For very large or complex applications with numerous possible states (or continuous states), creating an exhaustive state diagram or table becomes impractical. In such cases, this technique may not scale well – defining and managing every possible state and transition can be extremely time-consuming and error-prone. 
 
-# References
+## References
 
 I used a generative AI (ChatGPT) to help draft the content of this analysis. The tool generally provided correct descriptions of state transition testing, but again required alteration when it came to generating an example. The example it provided had no code and wasn't the clearest. It's example was a login page where there user had tried logging in three times and was presented with a locked state. I thought a much more clear example could be testing a design system component (with actual code). 
