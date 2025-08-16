@@ -12,6 +12,7 @@
 ### [Project #1](./week2/main.py)
 ### [Project #2](./week4/postman_project.md)
 ### [Project #3](./week6/project3/README.md)
+### [Project #4](./week8/project4/README.md)
 
 ### Getting Started
 
