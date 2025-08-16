@@ -68,4 +68,4 @@ jobs:
 
       - name: Run tests with selenium
         run: |
-          pytest ./week8 --headless
+          pytest ./week8
