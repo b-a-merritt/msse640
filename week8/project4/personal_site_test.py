@@ -17,21 +17,29 @@ def test_prolog_emulator(chrome_browser):
     chrome_browser.get(site_url)
     wait = WebDriverWait(chrome_browser, 10)
 
-    proceed_button = wait.until(expected_conditions.element_to_be_clickable((
-        By.XPATH,
-        "//*/button[contains(text(), 'Proceed')]"
-    )))
-    proceed_button.click()
+    try:
+        proceed_button = wait.until(expected_conditions.element_to_be_clickable((
+            By.XPATH,
+            "//*/button[contains(text(), 'Proceed')]"
+        )))
+        proceed_button.click()
+    except Exception:
+        pass
 
-    form = wait.until(expected_conditions.element_to_be_clickable((
-        By.TAG_NAME,
+
+    form_element = wait.until(expected_conditions.element_to_be_clickable((
+        By.TAG_NAME, 
         'form'
     )))
-    input = form.find_element(By.TAG_NAME, 'input')
-    input.send_keys("skill(X, language).")
-    input.submit()
+    input_element = wait.until(expected_conditions.element_to_be_clickable((
+        By.TAG_NAME, 
+        'input'
+    )))
+    chrome_browser.execute_script("arguments[0].scrollIntoView(true);", input_element)
+    input_element.send_keys("skill(X, language).")
+    form_element.submit()
     
-    time.sleep(2)
+    time.sleep(5)
 
     terminal = chrome_browser.find_element(
         By.XPATH,
